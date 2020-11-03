@@ -3,7 +3,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
     
-   <meta charset="utf-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
@@ -21,6 +21,7 @@
 	<table class="table text-center">
   <thead class="thead-dark ">
     <tr>
+      
       <th scope="col">Plan</th>
       <th scope="col">validity</th>
       <th scope="col">Benefits</th>
@@ -33,10 +34,10 @@
   
     <tr>  
 			<td>
-				<%=ofr.getPlan()%>
+				<%= "Rs. "+ofr.getPlan()%>
 			</td>
 			<td>
-				<%=ofr.getValidity()%>
+				<%=ofr.getValidity()+"Days" %>
 			</td>
 			<td>
 				<%=ofr.getBenefits()%>
@@ -46,11 +47,15 @@
 			
 		</tr>
 		<% } %>
-    </tr>
+    
   </tbody>
 </table>
  
-</div>	
-   <h3 style="text-align: center;"><a href="recharge_add_form">Back</a></h3>
+   </div>
+
+   <div style="text-align: center;">
+     <a href="recharge_add_form.jsp">Back And Recharge</a>
+   </div>	
+  
 </body>
 </html>

@@ -8,12 +8,16 @@
 <title>Home Page</title>
 </head>
 <body>
-   <h1>Welcome Home </h1>
-       
-	<h1> Welcome <%=(session.getAttribute("user")!=null) ?((User)session.getAttribute("user")).getUserName():"!!!!!!!!" %></h1>
-	<div>
+   
+      <%@ include file="header.jsp" %>
+	<!--<h1> Welcome <%=(session.getAttribute("user")!=null) ?((User)session.getAttribute("user")).getUserName():"!!!!!!!!" %></h1>-->
+
+	<div style="text-align: center; margin-top: 50px; margin-left: 20px;">
+	
    <a href="prep_recharge_add_form.htm">Recharge!!!</a><br>
    <a href="recharge_history.htm"> See your Bills</a>
    </div>
+   
+   
 </body>
 </html>

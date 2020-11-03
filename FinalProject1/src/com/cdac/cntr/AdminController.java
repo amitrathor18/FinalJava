@@ -33,7 +33,7 @@ public class AdminController {
 		
 		if(adminUser.getAdminName().equals("Anjali") && adminUser.getAdmpassword().equals("1234") )
 		{
-			session.setAttribute("admin_name", "leena");
+			session.setAttribute("admin_name", "Anjali");
 			return "AdminHome";
 		}
 		else {

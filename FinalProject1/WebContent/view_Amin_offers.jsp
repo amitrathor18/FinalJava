@@ -56,5 +56,8 @@
 </table>
  
 </div>	
+  <div style="text-align: center;">
+     <a href="AdminHome.jsp">Back Home</a>
+  </div>
 </body>
 </html>

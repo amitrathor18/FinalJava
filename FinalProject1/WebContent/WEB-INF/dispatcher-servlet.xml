@@ -29,6 +29,7 @@
 				<value>com.cdac.dto.User</value>
 				<value>com.cdac.dto.Recharge</value>
 				<value >com.cdac.valid.UserValid</value>
+				<value>com.cdac.dto.AdminAddOffers</value>
 			</list>
 		</property>
 	</bean>

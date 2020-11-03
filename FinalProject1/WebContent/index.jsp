@@ -10,7 +10,8 @@
    <div style="text-align: center;margin-top:150px">
    <a href="prep_reg_form.htm">sign Up</a><br>
     
-   <a href="prep_log_form.htm">sign in or Login</a>
+   <a href="prep_log_form.htm">User Login</a><br>
+   <a href="Admin_login_form.htm">Admin Login</a>
    </div>
 </body>
 </html>

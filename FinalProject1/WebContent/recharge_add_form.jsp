@@ -1,3 +1,5 @@
+<%@page import="com.cdac.dto.AdminAddOffers"%>
+<%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
     <%@ taglib uri="http://www.springframework.org/tags/form" prefix="spr" %>
@@ -19,38 +21,44 @@
 				<spr:input path="mobNo"/>
 			</td>
 		</tr>
-		<!-- <tr>
+		
+	    <% 
+		List<AdminAddOffers> clist = (List<AdminAddOffers>)request.getAttribute("offerlist");
+		for( AdminAddOffers ofr : clist){
+		%>
+	     
+		
+		<tr>
 			<td>
-				Operator:
+				Enter Amount :
 			</td>
 			<td>
-				<spr:radiobutton path="operator" value="vodaphone" />vodafone
-				<spr:radiobutton path="operator" value="idea"/>idea
-				<spr:radiobutton path="operator" value="gio"/>jio
-				<spr:radiobutton path="operator" value="airtel"/>airtel
-				<spr:radiobutton path="operator" value="bsnl"/>bsnl
+			  <spr:select path="amount">
+			    
+			     <spr:option value="<%= ofr.getPlan()%>"></spr:option>
+			       
+			    
+			  </spr:select>
 				
 			</td>
-		</tr>-->
-		<tr>
-			<td>
-		         <a href="view_offer.jsp">View Offer</a>
-			</td>
 		</tr>
+		
+		<% } %>
+		
 		<tr>
 			<td>
-				Enter Recharge Amount:
+		         <a href="view_offer.htm">View Offer</a>
 			</td>
-			<td>
-				<spr:input path="amount"/>
-			</td>
-		</tr>
-		<tr>
 			<td>
 				<a href="home.jsp" >Back</a>
 			</td>
+		</tr>
+		<tr>
 			<td>
-				<input type="submit"  value="Recharge" >
+			    
+			</td>
+			<td>
+				<input style="color: red ; "type="submit"  value="Recharge" >
 			</td>
 		</tr>
 	</table>
