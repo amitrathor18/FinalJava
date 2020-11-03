@@ -22,28 +22,19 @@
 			</td>
 		</tr>
 		
-	    <% 
-		List<AdminAddOffers> clist = (List<AdminAddOffers>)request.getAttribute("offerlist");
-		for( AdminAddOffers ofr : clist){
-		%>
-	     
-		
 		<tr>
 			<td>
 				Enter Amount :
 			</td>
 			<td>
-			  <spr:select path="amount">
-			    
-			     <spr:option value="<%= ofr.getPlan()%>"></spr:option>
-			       
-			    
-			  </spr:select>
-				
+				<spr:input path="amount"/>
 			</td>
 		</tr>
 		
-		<% } %>
+	    
+	     
+		
+		
 		
 		<tr>
 			<td>

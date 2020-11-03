@@ -15,7 +15,7 @@
 	<div style="text-align: center; margin-top: 50px; margin-left: 20px;">
 	
    <a href="prep_recharge_add_form.htm">Recharge!!!</a><br>
-   <a href="recharge_history.htm"> See your Bills</a>
+   <a href="recharge_Bill.htm"> See your Bills</a>
    </div>
    
    

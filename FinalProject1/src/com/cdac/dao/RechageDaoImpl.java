@@ -35,5 +35,24 @@ public class RechageDaoImpl implements RechargeDao{
   
 		});
 	}
+	@Override
+	public List<Recharge> selectAll(int userId) {
+		List<Recharge> list=hibernateTemplate.execute(new HibernateCallback<List<Recharge>>() {
+
+			@Override
+			public List<Recharge> doInHibernate(Session session) throws HibernateException {
+				Transaction tr=session.beginTransaction();
+				Query q=session.createQuery("from Recharge where userId=?");
+				q.setInteger(0,userId);
+				List<Recharge> li=q.list();
+				tr.commit();
+				session.flush();
+				session.close();
+				
+				return li;
+			}
+		});
+		return list;
+	}
 
 }

@@ -1,5 +1,7 @@
 package com.cdac.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,5 +17,11 @@ public class RechargeServiceImple implements RechargeService{
 	   rechargeDao.insertRecharge(recharge);
 		
 	}
+	@Override
+	public List<Recharge> selectBill(int userId) {
+		
+		return rechargeDao.selectAll(userId);
+	}
+	
 
 }

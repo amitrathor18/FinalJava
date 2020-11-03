@@ -50,4 +50,14 @@ public class RechargeController {
 		map.put("offerlist",li);
 		return "view_offers";
 	}
+	
+	@RequestMapping(value="/recharge_Bill.htm", method=RequestMethod.GET)
+	public String seeBills(ModelMap map,HttpSession session)
+	{
+		int userId = ((User)session.getAttribute("user")).getUserId();
+		System.out.println(userId);
+		List<Recharge> li = rechargeService.selectBill(userId);
+		map.put("rechList", li);
+		return "ShowBill";
+	}
 }
