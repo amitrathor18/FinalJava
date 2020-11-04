@@ -70,5 +70,28 @@ public class UserDaoImple implements UserDao{
 		
 		return f;
 	}
+	@Override
+	public String forgotPassword(String userName) {
+		String password = hibernateTemplate.execute(new HibernateCallback<String>() {
+
+			@Override
+			public String doInHibernate(Session session) throws HibernateException {
+				Transaction tr = session.beginTransaction();
+				Query q = session.createQuery("from User where emailId = ?");
+				q.setString(0, userName);
+				List<User> li = q.list();
+				String pass = null;
+				System.out.println(li);
+				if(!li.isEmpty())
+					pass = li.get(0).getUserPass();
+				tr.commit();
+				session.flush();
+				session.close();
+				return pass;
+			}
+			
+		});
+		return password;
+	}
   
 }

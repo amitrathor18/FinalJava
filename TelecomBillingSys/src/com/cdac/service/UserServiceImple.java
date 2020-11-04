@@ -21,5 +21,9 @@ public class UserServiceImple implements UserService{
 		return  userDao.checkuser(user);
 		
 	}
+	@Override
+	public String forgotPassword(String userName) {
+		return userDao.forgotPassword(userName);
+	}
 
 }

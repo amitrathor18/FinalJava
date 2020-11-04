@@ -44,6 +44,9 @@
 			</td>
 		</tr>
 		<tr>
+		    <td>
+				<a href="forgot_password.html" >Forgot Password</a>
+			</td>
 			<td>
 				<a style=" font-size:23px" href="index.jsp" >Back</a>
 			</td>

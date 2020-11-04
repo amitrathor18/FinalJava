@@ -12,7 +12,7 @@
 <meta charset="ISO-8859-1">
 <title>Home Page</title>
 </head>
-<body>
+<body style="background-color:">
    
       <%@ include file="header.jsp" %>
 	<!--<h1> Welcome <%=(session.getAttribute("user")!=null) ?((User)session.getAttribute("user")).getUserName():"!!!!!!!!" %></h1>-->
@@ -28,6 +28,8 @@
 </html>
 
 <% }else{
+	
 	response.sendRedirect("login_form.jsp");	
-	}
+	
+}
 	%>
